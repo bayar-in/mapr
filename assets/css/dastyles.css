@@ -1,0 +1,210 @@
+.sidebar {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+.sidebar h3 {
+  font-weight: bold;
+  color: #34a0a4;
+}
+.sidebar .nav-link {
+  color: #34a0a4;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+.sidebar .nav-link.active {
+  background-color: #34a0a4;
+  color: white;
+}
+.sidebar .nav-link i {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+.sidebar .nav-link:hover {
+  background-color: #e0e0e0;
+  color: #34a0a4;
+}
+
+.stat-card {
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.stat-card-icon {
+  background-color: #e0e7ff;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stat-card-icon i {
+  font-size: 24px;
+  color: #000;
+}
+.stat-card h5 {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+.stat-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.stat-card .stat-card-footer {
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+.stat-card .text-success {
+  color: #0d6efd !important;
+}
+.stat-card .text-danger {
+  color: #d9534f !important;
+}
+
+.table thead th {
+  background-color: #f8f9fa;
+  border-bottom: none;
+  font-weight: bold;
+}
+.table tbody td {
+  vertical-align: middle;
+}
+.badge-status {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.badge-delivered {
+  background-color: #20c997;
+  color: white;
+}
+.badge-pending {
+  background-color: #ffc107;
+  color: white;
+}
+.badge-rejected {
+  background-color: #dc3545;
+  color: white;
+}
+.product-image {
+  width: 40px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* // stock product// */
+
+.product-stock-table {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product-image {
+  width: 40px;
+  height: auto;
+  border-radius: 8px;
+}
+.action-icons i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #dc3545;
+  margin: 0 5px;
+}
+.available-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* // order list // */
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.filter-section button {
+  background: #f8f9fa;
+  border: none;
+  color: #34a0a4;
+}
+.filter-section .dropdown-toggle {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px 15px;
+}
+.table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+}
+.badge-completed {
+  background-color: #20c997;
+}
+.badge-processing {
+  background-color: #6c63ff;
+}
+.badge-rejected {
+  background-color: #dc3545;
+}
+.badge-on-hold {
+  background-color: #ffc107;
+}
+.badge-in-transit {
+  background-color: #17a2b8;
+}
+
+/* // inbox // */
+
+.inbox-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.search-bar {
+  width: 300px;
+}
+.inbox-table {
+  border-top: 1px solid #dee2e6;
+}
+.inbox-table .badge {
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+.badge-primary {
+  background-color: #17a2b8;
+  color: white;
+}
+.badge-social {
+  background-color: #6f42c1;
+  color: white;
+}
+.badge-work {
+  background-color: #fd7e14;
+  color: white;
+}
+.badge-friends {
+  background-color: #e83e8c;
+  color: white;
+}

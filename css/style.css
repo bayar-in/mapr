@@ -1,0 +1,186 @@
+:root {
+  --primary-color: #34a0a4;
+  --secondary-color: #58355e;
+  --teks-color-1: #f9ed5b;
+  --teks-color-2: #acff6c;
+  --teks-color-3: #7ae7c7;
+}
+
+.body_maps {
+  margin: 0;
+}
+
+.head {
+  padding: 50px 0px 0px 100px;
+}
+
+#map {
+  width: 100%;
+  height: 90vh;
+  border-radius: 20px; /* Membuat sudut melengkung */
+  overflow: hidden; /* Memastikan konten tetap berada dalam area rounded */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan untuk tampilan modern */
+  position:flex;
+}
+
+.ol-zoom {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ol-attribution {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.btn_toggle {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  transition: ease-in-out 0.2s;
+  /* position: absolute; */
+
+
+}
+
+.btn_toggle:hover {
+  background-color: #3fc1c6;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #f4f4f4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hitung {
+  color: var(--primary-color);
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+  transition: ease-in-out 0.2s;
+}
+
+.hitung:hover {
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#toggle-content {
+  transition: all 0.3s ease-in-out;
+  width:100%;
+  /* position: absolute; */
+
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0); /* Kembalikan ke posisi normal */
+  pointer-events: auto; /* Aktifkan interaksi */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .head {
+    padding: 20px 10px 0px 10px; /* Kurangi padding */
+    text-align: center; /* Teks di tengah */
+  }
+
+  #map {
+    width: 100%; /* Sesuaikan dengan layar */
+    height: 60vh; /* Kurangi tinggi peta */
+  }
+
+  .btn_toggle {
+    bottom: 15vh; /* Sesuaikan posisi tombol toggle */
+    left: 5vh;
+  }
+
+  #toggle-content {
+    bottom: 10vh; /* Sesuaikan posisi elemen toggle */
+    left: 5vh; /* Posisikan di tengah layar */
+    width: calc(100% - 20px); /* Sesuaikan lebar elemen toggle */
+  }
+
+  .col-lg-8,
+  .col-lg-4 {
+    flex: 0 0 100%; /* Kolom menjadi 100% lebar layar */
+    max-width: 100%;
+  }
+
+  .auth-buttons a {
+    font-size: 14px; /* Kecilkan ukuran font tombol login/logout */
+    margin: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  #map {
+    height: 50vh; /* Kurangi tinggi peta lebih jauh */
+  }
+
+  .btn_toggle {
+    bottom: 10vh;
+    left: 10px;
+    width: calc(100% - 20px); /* Tombol memenuhi layar */
+    text-align: center;
+  }
+
+  #toggle-content {
+    bottom: 5vh; /* Posisikan lebih rendah */
+    left: 10px;
+    width: calc(100% - 20px); /* Elemen memenuhi layar */
+  }
+
+  h1,
+  p {
+    font-size: 16px; /* Perkecil ukuran teks */
+  }
+
+  .card {
+    padding: 10px; /* Kurangi padding pada card */
+  }
+}

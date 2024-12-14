@@ -101,11 +101,33 @@ document.getElementById("btn-distance").addEventListener("click", async () => {
     if (roadsData) {
       const geoJSON = convertToGeoJSON(roadsData);
       displayRoads(geoJSON);
+      const roadProperties = geoJSON.features[0]?.properties;
+      if (roadProperties) {
+        // Save longitude, latitude, and properties to localStorage
+        localStorage.setItem("longitude", longitude);
+        localStorage.setItem("latitude", latitude);
+        localStorage.setItem("name", roadProperties.name || "N/A");
+
+        // Update UI with stored data
+        updateRoadInfo();
+      }
     }
   } catch (error) {
     console.error("Error in distance calculation:", error);
   }
 });
+
+function updateRoadInfo() {
+  // Retrieve data from localStorage
+  const longitude = localStorage.getItem("longitude");
+  const latitude = localStorage.getItem("latitude");
+  const district = localStorage.getItem("name");
+
+  // Update the HTML elements with the retrieved data
+  document.getElementById("longitude").textContent = longitude;
+  document.getElementById("latitude").textContent = latitude;
+  document.getElementById("name").textContent = name;
+}
 
 // Region
 document.getElementById("regionSearch").addEventListener("click", async () => {

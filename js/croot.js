@@ -195,31 +195,21 @@ async function fetchRoads(longitude, latitude, maxDistance, token) {
       }
     );
 
-    const roadsProperties = geoJSON.features[0]?.properties;
-      if (roadsProperties) {
-        // Save longitude, latitude, and properties to localStorage
-        localStorage.setItem("name", name);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
 
-        // Update UI with stored data
-        updateRoadsInfo();
-      }
-    } else {
-      Swal.fire({
-        title: "Fetch Failed",
-        text: "Failed to fetch region data. Please try again.",
-        icon: "error",
-        confirmButtonText: "OK",
-      });
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching roads:", error);
+    Swal.fire({
+      title: "Error",
+      text: "Error fetching roads. Please try again.",
+      icon: "error",
+      confirmButtonText: "OK",
+    });
     return null;
   }
-}
-
-function updateRoadsInfo() {
-  // Retrieve data from localStorage
-  const name = localStorage.getItem("name");
-
-  // Update the HTML elements with the retrieved data
-  document.getElementById("name").textContent = name;
 }
 
 // Function to display roads

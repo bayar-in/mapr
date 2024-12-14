@@ -49,20 +49,20 @@
           <div class="col mt-2 popup">
             <button id="toggle-btn" class="mb-3 w-100 btn_toggle">Show</button>
             <div id="toggle-content" class="card p-3 hidden">
-              <h5 class="card-title">Radius Pencarian</h5>
+              <h5 class="card-title">Radius Maksimal</h5>
 
               <button id="regionSearch" class="btn btn-secondary w-100 mb-3 d-none">
                 Wilayah
               </button>
               <button id="btn-distance" class="btn btn-secondary w-100 mb-3">
-                Cari
+                Hitung
               </button>
               <div class="input-group mb-3">
                 <input
                   type="number"
                   id="distance-input"
                   class="form-control"
-                  placeholder="Masukkan radius (M)"
+                  placeholder="Masukkan radius (m)"
                 />
               </div>
               <div id="result-info" class="result-info" style="display: none">
@@ -71,7 +71,12 @@
             </div>
             <div class="card mt-4">
               <div id="region-info" class="border p-2 bg-light rounded d-none">
-                <p><strong>Nama Jalan:</strong> <span id="name"></span></p>
+                <p><strong>Longitude:</strong> <span id="longitude"></span></p>
+                <p><strong>Latitude:</strong> <span id="latitude"></span></p>
+                <p><strong>District:</strong> <span id="district"></span></p>
+                <p><strong>Province:</strong> <span id="province"></span></p>
+                <p><strong>Sub-district:</strong> <span id="sub-district"></span></p>
+                <p><strong>Village:</strong> <span id="village"></span></p>
               </div>
             </div>
           </div>

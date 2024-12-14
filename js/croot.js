@@ -198,7 +198,7 @@ async function fetchRoads(longitude, latitude, maxDistance, token) {
     const roadsProperties = geoJSON.features[0]?.properties;
       if (roadsProperties) {
         // Save longitude, latitude, and properties to localStorage
-        localStorage.setItem("name", longitude);
+        localStorage.setItem("name", name);
 
         // Update UI with stored data
         updateRoadsInfo();
@@ -214,7 +214,7 @@ async function fetchRoads(longitude, latitude, maxDistance, token) {
   }
 }
 
-function updateRegionInfo() {
+function updateRoadsInfo() {
   // Retrieve data from localStorage
   const name = localStorage.getItem("name");
 

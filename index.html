@@ -50,23 +50,31 @@
           <div class="col mt-2 popup">
             <button id="toggle-btn" class="mb-3 w-100 btn_toggle">Show</button>
             <div id="toggle-content" class="card p-3 hidden">
-              <h5 class="card-title">Cari Wilayah</h5>
+              <h5 class="card-title">Cari Jalan</h5>
 
-              <button id="regionSearch" class="btn btn-secondary w-100 mb-3">
+              <button id="regionSearch" class="btn btn-secondary w-100 mb-3 d-none">
                 Cari
               </button>
               <button id="btn-distance" class="btn btn-secondary w-100 mb-3 d-none">
-                Hitung
+                Cari
               </button>
+              <div class="input-group mb-3">
+                <input
+                  type="number"
+                  id="distance-input"
+                  class="form-control"
+                  placeholder="Masukkan radius (m)"
+                />
             </div>
             <div class="card mt-4">
               <div id="region-info" class="border p-2 bg-light rounded">
-                <p><strong>Longitude:</strong> <span id="longitude"></span></p>
+                <p><strong>Nama Jalan: <span id="name"></span></strong></p>
+                <!-- <p><strong>Longitude:</strong> <span id="longitude"></span></p>
                 <p><strong>Latitude:</strong> <span id="latitude"></span></p>
                 <p><strong>District:</strong> <span id="district"></span></p>
                 <p><strong>Province:</strong> <span id="province"></span></p>
                 <p><strong>Sub-district:</strong> <span id="sub-district"></span></p>
-                <p><strong>Village:</strong> <span id="village"></span></p>
+                <p><strong>Village:</strong> <span id="village"></span></p> -->
               </div>
             </div>
           </div>

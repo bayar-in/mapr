@@ -323,7 +323,7 @@ function convertToGeoJSON(response) {
 }
 
 function checkLoginStatus() {
-  const isLoggedIn = window.Cookies.get("login");
+  const isLoggedIn = window.localStorage.get("login");
 
   // Jika belum login, tampilkan alert dan redirect ke halaman login
   if (isLoggedIn) {
